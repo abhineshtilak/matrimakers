@@ -1,0 +1,212 @@
+:root{
+  --bg: #06040a;
+  --panel: rgba(255,255,255,0.03);
+  --accent: #d98a1a;
+  --brass: #b66b3a;
+  --muted: rgba(255,255,255,0.60);
+  --radius: 16px;
+  --max-width: 860px;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+    radial-gradient(800px 320px at 10% 10%, rgba(217,138,26,0.04), transparent 6%),
+    radial-gradient(700px 300px at 90% 80%, rgba(15,107,88,0.02), transparent 6%),
+    var(--bg);
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+}
+
+/* MAIN WRAPPER */
+.site{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:26px;
+  padding:28px 20px;
+  background:rgba(255,255,255,0.01);
+  border-radius:20px;
+  box-shadow:0 10px 38px rgba(0,0,0,0.55);
+}
+
+/* HERO SECTION */
+.hero{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+/* LOGO */
+.logo-wrap{
+  width:180px;               /* FIXED small size */
+  aspect-ratio:1/1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+  width:100%;
+  height:auto;
+  opacity:0.9;
+}
+
+/* BRANDING */
+.headline{
+  text-align:center;
+}
+
+.brand{
+  font-family:Merriweather, serif;
+  font-size:clamp(24px, 6vw, 42px);
+  font-weight:700;
+  letter-spacing:0.06em;
+  margin-top:6px;
+}
+
+.coming{
+  font-family:Merriweather, serif;
+  font-size:clamp(13px, 2.4vw, 16px);
+  color:var(--brass);
+  margin-top:4px;
+}
+
+/* MAIN CONTENT */
+.content{
+  max-width:700px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:clamp(14px, 2.4vw, 16px);
+  line-height:1.45;
+  max-width:60ch;
+  margin:0 auto;
+}
+
+/* CARDS */
+.cards{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.card{
+  background:var(--panel);
+  padding:18px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.05);
+  text-align:left;
+  box-shadow:0 10px 26px rgba(0,0,0,0.45);
+}
+
+.card-title{
+  font-family:Merriweather, serif;
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.card-body{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+/* FOOTER */
+.note{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.site-footer{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:10px;
+}
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+
+.social{
+  padding:8px 12px;
+  font-size:13px;
+  color:var(--muted);
+  background:rgba(255,255,255,0.02);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  text-decoration:none;
+}
+
+.legal{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* RESPONSIVENESS */
+
+/* Medium screens */
+@media (max-width:880px){
+  .site{
+    padding:22px 14px;
+    gap:20px;
+  }
+
+  .logo-wrap{
+    width:160px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width:480px){
+  body{ padding:12px; }
+
+  .site{
+    padding:16px;
+  }
+
+  .logo-wrap{
+    width:140px;
+    padding:8px;
+  }
+
+  .lead{
+    max-width:100%;
+    padding:0 4px;
+  }
+
+  .card{
+    padding:14px;
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MATRI MAKERS — Coming Soon</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="site" role="main" aria-labelledby="brand">
+    
+    <!-- HERO SECTION -->
+    <header class="hero" role="banner">
+      <div class="logo-wrap">
+        <svg class="logo" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-label="Matri Makers logo">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffdca3" />
+              <stop offset="1" stop-color="#b66b3a" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(300 300)">
+            <circle r="120" fill="none" stroke="url(#g)" stroke-opacity="0.08" stroke-width="6"/>
+            <g fill="#b66b3a" fill-opacity="0.06">
+              <path d="M0 -60 C36 -44 52 -14 36 22 C16 50 -16 58 -36 26 C-60 -14 -16 -60 0 -60 Z"/>
+            </g>
+            <text x="0" y="18" text-anchor="middle" font-family="Merriweather, serif" font-weight="700" font-size="86" fill="url(#g)">M</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="headline">
+        <h1 id="brand" class="brand">MATRI MAKERS</h1>
+        <p class="coming">C O M I N G  &nbsp; S O O N</p>
+      </div>
+    </header>
+
+    <!-- CONTENT SECTION -->
+    <section class="content" aria-label="About Matri Makers">
+
+      <p class="lead">
+        <strong>Your spiritual journey deserves clarity and authentic guidance.</strong><br>
+        Matri Makers helps you connect with trusted pandits, genuine spiritual items,
+        and artisans who still create with devotion.  
+        No noise. No confusion. Just a clear path to the traditions that uplift you.
+      </p>
+
+      <div class="cards">
+
+        <!-- Problem Card -->
+        <article class="card" aria-labelledby="p1">
+          <h3 id="p1" class="card-title">The challenge today</h3>
+          <p class="card-body">
+            Finding the right pandit or the right ritual items often feels uncertain.  
+            Who to trust? What is authentic? How do you know something is made with intention,
+            not mass production?  
+            Spirituality should never feel doubtful - yet many seekers face this every day.
+          </p>
+        </article>
+
+        <!-- Solution Card -->
+        <article class="card" aria-labelledby="p2">
+          <h3 id="p2" class="card-title">What we bring to your journey</h3>
+          <p class="card-body">
+            We connect you with verified pandits, experienced spiritual guides,
+            and artisans who craft with purity and skill.  
+            Every name, every item, every creation is chosen with care.
+            So your rituals feel true, meaningful, and supported.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="note">
+        We’re building a home for seekers. A place where tradition meets trust.  
+        Until we launch, stay connected with us for updates and sacred offerings.
+      </p>
+
+      <!-- FOOTER -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="socials">
+          <a href="#" class="social">Facebook • @matrimakers</a>
+          <a href="#" class="social">Instagram • @matrimakers.art</a>
+          <a href="#" class="social">Email • contact@matrimakers.in</a>
+        </div>
+
+        <div class="legal">
+          © <span id="year"></span> Matri Makers - Walking with you on your sacred path
+        </div>
+      </footer>
+
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
