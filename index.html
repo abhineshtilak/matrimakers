@@ -137,46 +137,90 @@
   </section>
 
   <!-- ================= CALLBACK FORM ================= -->
-  <section class="callback" id="callback">
-    <div class="container">
-      <h3 class="section-title">Request a Callback</h3>
-      <p class="callback-subtext">
-        Share basic details. Our team will call you within 30 minutes.
+<!-- ================= CALLBACK FORM ================= -->
+<section class="callback" id="callback">
+  <div class="container">
+    <h3 class="section-title">Request a Callback</h3>
+
+    <p class="callback-subtext">
+      Share basic details. Our team will call you within 30 minutes.
+    </p>
+
+    <form id="callbackForm" class="callback-form">
+
+      <!-- Name -->
+      <input 
+        type="text" 
+        id="name" 
+        name="name"
+        placeholder="Full Name" 
+        required 
+      />
+
+      <!-- Phone -->
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone"
+        placeholder="Mobile Number" 
+        required 
+      />
+
+      <!-- Ritual -->
+      <select id="ritual" name="ritual" required>
+        <option value="">Select Ritual</option>
+        <option value="Griha Pravesh Puja">Griha Pravesh Puja</option>
+        <option value="Havan / Yagya">Havan / Yagya</option>
+        <option value="Terahvi / Shradh">Terahvi / Shradh</option>
+        <option value="General Pooja">General Pooja</option>
+        <option value="Birthday Pooja">Birthday Pooja</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <!-- Location -->
+      <select id="area" name="area" required>
+        <option value="">Select Area</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Noida">Noida</option>
+        <option value="Gurugram">Gurugram</option>
+        <option value="Faridabad">Faridabad</option>
+      </select>
+
+      <!-- Preferred Date -->
+      <input 
+        type="date" 
+        id="date" 
+        name="date"
+      />
+
+      <!-- Preferred Time -->
+      <select id="time" name="time">
+        <option value="">Preferred Time</option>
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+      </select>
+
+      <!-- Additional Notes -->
+      <textarea 
+        id="notes" 
+        name="notes"
+        placeholder="Any additional details about the ritual (optional)"
+        rows="3"
+      ></textarea>
+
+      <!-- Submit -->
+      <button type="submit" class="primary-btn">
+        Request Callback
+      </button>
+
+      <p class="section-intro">
+        Every ritual is unique. We prefer understanding your requirement personally.
       </p>
 
-      <form id="callbackForm" class="callback-form">
-        <input type="text" id="name" placeholder="Full Name" required />
-        <input type="tel" id="phone" placeholder="Mobile Number" required />
-
-        <select id="ritual" required>
-          <option value="">Select Ritual</option>
-          <option>Griha Pravesh Puja</option>
-          <option>Havan / Yagya</option>
-          <option>Terahvi / Shradh</option>
-          <option>General Pooja</option>
-          <option>Birthday Pooja</option>
-        </select>
-
-        <input type="date" id="date" required />
-
-        <select id="area" required>
-          <option value="">Select Area</option>
-          <option>Delhi</option>
-          <option>Noida</option>
-          <option>Gurugram</option>
-          <option>Faridabad</option>
-        </select>
-
-        <button type="submit" class="primary-btn">
-          Request Callback
-        </button>
-        <p class="section-intro">
-  Every ritual is unique. We prefer understanding your requirement personally.
-</p>
-
-      </form>
-    </div>
-  </section>
+    </form>
+  </div>
+</section>
 
   <!-- ================= FOOTER ================= -->
  <footer class="footer">
@@ -193,6 +237,6 @@
   </div>
 </footer>
 
-
+<script src="script.js"></script>
 </body>
 </html>
