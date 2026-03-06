@@ -14,7 +14,7 @@ form.addEventListener("submit", function (e) {
     notes: document.getElementById("notes").value
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbxyNLVGAvhjcyG3jhlK1NNRIT98qZcFFFDd5bxSf0Vvxr1w9o_YLBNhoxCibkbbkMSeIQ/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxkW-23u4Qa4ZPOHA6JJzMOALVsnAfiUhdvMQPn97WKwRSc_4EF2rbTeGQmmvKxfdRZug/exec", {
     method: "POST",
     mode: "no-cors",   // IMPORTANT
     body: JSON.stringify(data)
