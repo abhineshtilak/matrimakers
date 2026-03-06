@@ -14,24 +14,14 @@ form.addEventListener("submit", function (e) {
     notes: document.getElementById("notes").value
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbzYtipb9BuhcnTvMzhu9rc5_ryYH43ZWETD4ycFZTqo2clbSegufPA6aFTF8GqUoTDtVA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxyNLVGAvhjcyG3jhlK1NNRIT98qZcFFFDd5bxSf0Vvxr1w9o_YLBNhoxCibkbbkMSeIQ/exec", {
     method: "POST",
+    mode: "no-cors",   // IMPORTANT
     body: JSON.stringify(data)
-  })
-  .then(response => response.text())
-  .then(result => {
-
-    alert("Thank you. We will call you shortly.");
-
-    form.reset();
-
-  })
-  .catch(error => {
-
-    alert("Something went wrong. Please try again.");
-
-    console.error(error);
-
   });
+
+  alert("Thank you. We will call you shortly.");
+
+  form.reset();
 
 });
